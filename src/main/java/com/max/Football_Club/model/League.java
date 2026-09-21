@@ -1,10 +1,8 @@
 package com.max.Football_Club.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -14,5 +12,6 @@ public class League {
     private int leagueId;
     private String name;
     private int numberOfTeams;
-    private List<Team> teams;
+    @OneToMany(mappedBy = "league", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Team> teams = new ArrayList<>();
 }
