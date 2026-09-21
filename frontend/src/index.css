@@ -130,3 +130,42 @@ td.actions {
   color: var(--danger);
   margin-bottom: 16px;
 }
+
+.tabs {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid var(--border);
+}
+
+button.tab {
+  background: transparent;
+  color: var(--muted);
+  border-radius: 6px 6px 0 0;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+}
+
+button.tab.active {
+  color: var(--fg);
+  border-bottom-color: var(--accent);
+}
+
+select {
+  padding: 8px 10px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--bg);
+  color: var(--fg);
+  font-size: 0.95rem;
+  max-width: 180px;
+}
+
+select:disabled {
+  opacity: 0.5;
+}
+
+form select {
+  flex: 1 1 160px;
+  max-width: none;
+}
